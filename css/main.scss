@@ -1,0 +1,372 @@
+//*======================================================================================================================
+
+
+// SASS Shit
+
+
+//======================================================================================================================*/
+
+	// Variables
+
+	@import 'partials/_variables';
+
+	// Mixins
+
+	@import 'partials/_mixins';
+
+/*======================================================================================================================
+
+
+FONTS
+
+
+======================================================================================================================*/
+
+	@import 'partials/_fonts';
+
+/*======================================================================================================================
+
+
+GENERAL
+
+
+======================================================================================================================*/
+
+	*, :after, :before {
+		box-sizing: border-box;
+	}
+
+	html, body {
+		margin: 0;
+		font-family: 'Merriweather', serif;
+		color: $light-blue;
+		-webkit-tap-highlight-color: $darker-gray;
+	}
+
+	a {
+		color: $light-blue;
+		text-decoration: none;
+
+		&:hover, &:focus, &:visited {
+			text-decoration: underline;
+			color: $blue;
+		}
+
+		&:visited {
+			color: $orange;
+		}
+	}
+
+	sup {
+		top: -0.5em;
+		left: .5px;
+		font-size: 60%;
+	}
+
+	@import 'partials/_typography';
+
+
+/*======================================================================================================================
+
+
+HEADER
+
+
+======================================================================================================================*/
+
+	header {
+		border-bottom: 1px solid $lighter-gray;
+
+		.header-logo {
+			width: 200px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			float: left;
+
+			img {
+				width: 100%;
+				filter: blur(0);
+				@include transition(.25s);
+				&:hover {
+					filter: blur(2.5px);
+				}
+			}
+		}
+
+		nav.main-navigation {
+			font-family: 'Avenir Next LT Pro Regular';
+			text-transform: uppercase;
+			display: table;
+    		float: right;
+
+			ul {
+				float: right;
+				padding-left: 0;
+				margin-bottom: 0;
+				line-height: 74px;
+
+				li {
+					list-style: none;
+					display: inline-block;
+					position: relative;
+
+					a {
+						display: block;
+						font-size: 12px;
+						padding-left: 5px;
+						padding-right: 5px;
+						text-decoration: none;
+						@include transition(.15s);
+
+						&:hover, &:focus {
+							text-decoration: none;
+							color: $blue;
+						}
+
+						&:visited {
+							text-decoration: none;
+							color: $light-blue;
+
+							&:hover, &:focus {
+								text-decoration: none;
+								color: $blue;
+							}
+						}
+					}
+				}
+			}
+
+			.menu-btn {
+				float: right;
+				font-family: 'Avenir Next LT Pro Demi';
+				text-transform: uppercase;
+				position: relative;
+				margin-left: 25px;
+
+				a {
+					color: $white;
+					background-color: $light-blue;
+					display: block;
+					line-height: 75px;
+					padding-left: 25px;
+					padding-right: 25px;
+					margin-left: 50px;
+					font-size: 12px;
+					letter-spacing: 2px;
+					text-decoration: none;
+					@include transition(.25s);
+
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0;
+						width: 0;
+						height: 0;
+						border-bottom: 75px solid $light-blue;
+						border-left: 50px solid transparent;
+						@include transition(.25s);
+					}
+
+					&:hover {
+						background-color: $blue;
+
+						&:before {
+							border-bottom: 75px solid $blue;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.quick-nav {
+		display: table;
+		width: 100%;
+
+		ul {
+			display: table;
+			width: 100%;
+			padding-left: 0;
+			margin: 0;
+
+			li {
+				list-style: none;
+				display: inline-block;
+				float: left;
+				display: block;
+
+				a.header-search {
+					font-family: 'Avenir Next LT Pro Regular';
+					font-size: 12px;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					display: block;
+					line-height: 30px;
+					margin-left: 15px;
+					padding-right: 15px;
+					padding-left: 15px;
+					background-color: $lighter-gray;
+					position: relative;
+					@include transition(.25s);
+
+					&:before {
+						content: '';
+						position: absolute;
+						width: 0;
+						height: 0;
+						border-top: 30px solid $lighter-gray;
+						border-left: 15px solid transparent;
+						left: -14.5px;
+						@include transition(.25s);
+					}
+
+					&:after {
+						content: '';
+						position: absolute;
+						width: 0;
+						height: 0;
+						border-top: 30px solid $light-gray;
+						border-left: 15px solid transparent;
+						right: -14px;
+						@include transition(.25s);
+					}
+
+					&:hover, &:focus {
+						text-decoration: none;
+						color: $blue;
+					}
+
+					&:visited {
+						text-decoration: none;
+						color: $light-blue;
+
+						&:hover, &:focus {
+							text-decoration: none;
+							color: $blue;
+						}
+					}
+
+					.search-icon {
+						background-image: url(../img/search.png);
+						padding-left: 18px;
+						background-size: contain;
+						background-repeat: no-repeat;
+						position: relative;
+						top: -1px;
+					}
+				}
+
+				a.header-login {
+					font-family: 'Avenir Next LT Pro Regular';
+					font-size: 12px;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					display: block;
+					line-height: 30px;
+					margin-left: 15px;
+					padding-right: 15px;
+					padding-left: 15px;
+					background-color: $lighter-gray;
+					position: relative;
+					@include transition(.25s);
+
+					&:before {
+						content: '';
+						position: absolute;
+						width: 0;
+						height: 0;
+						border-top: 30px solid $lighter-gray;
+						border-left: 15px solid transparent;
+						left: -14px;
+						@include transition(.25s);
+					}
+
+					&:after {
+						content: '';
+						position: absolute;
+						width: 0;
+						height: 0;
+						border-bottom: 30px solid $lighter-gray;
+						border-right: 15px solid transparent;
+						left: -15px;
+						top: 0;
+						@include transition(.25s);
+					}
+
+					&:hover, &:focus {
+						text-decoration: none;
+						color: $blue;
+					}
+
+					&:visited {
+						text-decoration: none;
+						color: $light-blue;
+
+						&:hover, &:focus {
+							text-decoration: none;
+							color: $blue;
+						}
+					}
+
+					.login-icon {
+						background-image: url(../img/login.png);
+						padding-left: 16px;
+						margin-left: 7px; 
+						height: 12px;
+    					float: right;
+						background-size: contain;
+						background-repeat: no-repeat;
+						position: relative;
+						top: 7px;
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
