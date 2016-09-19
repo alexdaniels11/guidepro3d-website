@@ -117,6 +117,10 @@ header {
       -o-transition: 0.25s;
       transition: 0.25s; }
       header .header-logo img:hover {
+        -webkit-filter: blur(2.5px);
+        -moz-filter: blur(2.5px);
+        -ms-filter: blur(2.5px);
+        -o-filter: blur(2.5px);
         filter: blur(2.5px); }
   header nav.main-navigation {
     font-family: 'Avenir Next LT Pro Regular';

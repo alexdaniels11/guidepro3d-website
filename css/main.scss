@@ -88,6 +88,10 @@ HEADER
 				filter: blur(0);
 				@include transition(.25s);
 				&:hover {
+					-webkit-filter: blur(2.5px);
+					-moz-filter: blur(2.5px);
+					-ms-filter: blur(2.5px);
+					-o-filter: blur(2.5px);
 					filter: blur(2.5px);
 				}
 			}
