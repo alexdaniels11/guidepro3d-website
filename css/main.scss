@@ -38,6 +38,7 @@ GENERAL
 
 	html, body {
 		margin: 0;
+		overflow-x: hidden;
 		font-family: 'Merriweather', serif;
 		color: $light-blue;
 		-webkit-tap-highlight-color: $darker-gray;
@@ -63,6 +64,10 @@ GENERAL
 		font-size: 60%;
 	}
 
+	.overflow-hidden {
+		overflow: hidden;
+	}
+
 	@import 'partials/_typography';
 
 
@@ -74,108 +79,224 @@ HEADER
 
 ======================================================================================================================*/
 
-	header {
-		border-bottom: 1px solid $lighter-gray;
+	.fixed-header {
+		position: fixed;
+		width: 100%;
+		z-index: 1;
 
-		.header-logo {
-			width: 200px;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			float: left;
+		header {
+			border-bottom: 1px solid $lighter-gray;
+			background-color: rgba(255,255,255,.95);
+			height: 75px;
 
-			img {
-				width: 100%;
-				filter: blur(0);
-				@include transition(.25s);
-				&:hover {
-					-webkit-filter: blur(2.5px);
-					-moz-filter: blur(2.5px);
-					-ms-filter: blur(2.5px);
-					-o-filter: blur(2.5px);
-					filter: blur(2.5px);
+			.header-logo {
+				width: 200px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				float: left;
+				@include transition(.15s);
+
+				img {
+					width: 100%;
+					filter: blur(0);
+					@include transition(.25s);
+					&:hover {
+						-webkit-filter: blur(2.5px);
+						-moz-filter: blur(2.5px);
+						-ms-filter: blur(2.5px);
+						-o-filter: blur(2.5px);
+						filter: blur(2.5px);
+					}
 				}
 			}
-		}
 
-		nav.main-navigation {
-			font-family: 'Avenir Next LT Pro Regular';
-			text-transform: uppercase;
-			display: table;
-    		float: right;
+			nav.main-navigation {
+				font-family: 'Avenir Next LT Pro Regular';
+				text-transform: uppercase;
+				display: table;
+	    		float: right;
 
-			ul {
-				float: right;
-				padding-left: 0;
-				margin-bottom: 0;
-				line-height: 74px;
+				ul {
+					float: right;
+					padding-left: 0;
+					margin-bottom: 0;
+					line-height: 74px;
+					@include transition(.15s);
 
-				li {
-					list-style: none;
-					display: inline-block;
-					position: relative;
+					li {
+						list-style: none;
+						display: inline-block;
+						position: relative;
 
-					a {
-						display: block;
-						font-size: 12px;
-						padding-left: 5px;
-						padding-right: 5px;
-						text-decoration: none;
-						@include transition(.15s);
-
-						&:hover, &:focus {
+						a {
+							display: block;
+							font-size: 12px;
+							padding-left: 5px;
+							padding-right: 5px;
 							text-decoration: none;
-							color: $blue;
-						}
-
-						&:visited {
-							text-decoration: none;
-							color: $light-blue;
+							@include transition(.15s);
 
 							&:hover, &:focus {
 								text-decoration: none;
 								color: $blue;
 							}
+
+							&:visited {
+								text-decoration: none;
+								color: $light-blue;
+
+								&:hover, &:focus {
+									text-decoration: none;
+									color: $blue;
+								}
+							}
+						}
+					}
+				}
+
+				.menu-btn {
+					float: right;
+					font-family: 'Avenir Next LT Pro Demi';
+					text-transform: uppercase;
+					position: relative;
+					margin-left: 25px;
+
+					a {
+						color: $white;
+						background-color: $light-blue;
+						display: inline-block;
+						line-height: 75px;
+						padding-left: 25px;
+						padding-right: 25px;
+						margin-left: 50px;
+						font-size: 12px;
+						letter-spacing: 2px;
+						text-decoration: none;
+						@include transition(.15s);
+
+						&:before {
+							content: '';
+							position: absolute;
+							left: 0;
+							width: 0;
+							height: 0;
+							border-bottom: 75px solid $light-blue;
+							border-left: 50px solid transparent;
+							@include transition(.15s);
+						}
+
+						&:hover {
+							background-color: $blue;
+
+							&:before {
+								border-bottom: 75px solid $blue;
+							}
+						}
+
+						.menu-hex-btn {
+							position: absolute;
+							width: 33px;
+							height: auto;
+							left: 10px;
+							top: 17px;
 						}
 					}
 				}
 			}
 
-			.menu-btn {
-				float: right;
-				font-family: 'Avenir Next LT Pro Demi';
-				text-transform: uppercase;
-				position: relative;
-				margin-left: 25px;
+			#openMobileNav {
+					float: right;
+				}
 
-				a {
-					color: $white;
-					background-color: $light-blue;
-					display: block;
-					line-height: 75px;
-					padding-left: 25px;
-					padding-right: 25px;
-					margin-left: 50px;
-					font-size: 12px;
-					letter-spacing: 2px;
-					text-decoration: none;
-					@include transition(.25s);
+			nav.mobile-navigation {
+				font-family: 'Avenir Next LT Pro Regular';
+				text-transform: capitalize;
+				background-color: $darker-gray;
+				position: absolute;
+				top: 0;
+				right: -100%;
+				z-index: 3;
+				padding: 20px;
+				width: 100%;
+				height: 100vh;
+				@include transition(.25s);
 
-					&:before {
-						content: '';
-						position: absolute;
-						left: 0;
-						width: 0;
-						height: 0;
-						border-bottom: 75px solid $light-blue;
-						border-left: 50px solid transparent;
-						@include transition(.25s);
+				.mobile-nav-header {
+					display: table;
+					width: 100%;
+					
+					.mobile-nav-logo {
+						float: left;
+						width: 200px;
+
+						img {
+							width: 100%;
+						}
 					}
 
-					&:hover {
-						background-color: $blue;
+					#closeMobileNav {
+						float: right;
+						color: $gray;
+						font-size: 65px;
+						line-height: 45px;
+					}
+				}
+
+				ul {
+					list-style: none;
+					padding-left: 0;
+					padding-top: 50px;
+
+					li {
+						margin-bottom: 10px;
+
+						a {
+							display: block;
+							text-decoration: none;
+							color: $white;
+							font-size: 24px;
+							@include transition(.15s);
+
+							&:hover {
+								color: $light-gray;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.scrolling {
+		@extend .fixed-header;
+
+		header {
+			height: 65px;
+
+			.header-logo {
+				width: 150px;
+			}
+
+			nav.main-navigation {
+
+				ul {
+					line-height: 65px;
+				}
+
+				.menu-btn {
+					a {
+						line-height: 65px;
 
 						&:before {
-							border-bottom: 75px solid $blue;
+							border-bottom: 65px solid #00a8c6;
+						}
+
+						&:hover {
+							background-color: $blue;
+
+							&:before {
+								border-bottom: 65px solid $blue;
+							}
 						}
 					}
 				}
@@ -331,7 +452,7 @@ HEADER
 /*======================================================================================================================
 
 
-Hero Area
+Home Hero Area
 
 
 ======================================================================================================================*/
@@ -339,21 +460,340 @@ Hero Area
 	.hero-area {
 		display: table;
 		width: 100%;
-		padding-top: 100px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		margin-top: 130px;
+		margin-bottom: 25px;
+		background-image: url(../img/hero-bg.png);
+		background-size: contain;
+		background-position: 83%;
+		background-repeat: no-repeat;
 
-		.hero-text {
-			max-width: 700px;
+		.hero-img {
+			text-align: center;
+
+			img {
+				width: 300px;
+			}
+		}
+
+		.hero-btn {
+			font-family: 'Avenir Next LT Pro Demi';
+			text-transform: uppercase;
+			position: relative;
+			clear: both;
+
+			a {
+				color: #fff;
+				background-color: $orange;
+				display: inline-block;
+				line-height: 75px;
+				padding-left: 25px;
+				padding-right: 25px;
+				font-size: 16px;
+				letter-spacing: 2px;
+				text-decoration: none;
+				@include transition(.25s);
+
+				&:after {
+					content: '';
+					position: absolute;
+					width: 0;
+					height: 0;
+					margin-left: 25px; 
+					border-top: 75px solid $orange;
+					border-right: 50px solid transparent;
+					@include transition(.25s);
+				}
+
+				&:hover {
+					background-color: $green;
+
+					&:after {
+						border-top: 75px solid $green;
+					}
+				}
+			}
 		}
 	}
 
+	.hp-content {
+
+		.hp-cta-left, .hp-cta-right {
+			padding: 0 5px 10px 10px;
+
+			.hp-callout {
+				background-image: url(../img/home-2.jpg);
+				background-size: cover;
+				background-position: center;
+				padding: 150px 100px 25px 25px;
+				position: relative;
+
+				&:before {
+					content: '';
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: $blue;
+					opacity: .75;
+				}
+
+				h2 {
+					font-size: 16px;
+					line-height: 24px;
+					letter-spacing: inherit;
+					font-family: 'Merriweather', serif;
+					color: $lighter-gray;
+					text-transform: none;
+					position: relative;					
+				}
+
+				.hp-callout-link {
+					font-family: 'Avenir Next LT Pro Demi';
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					font-size: 14px;
+
+					a {
+						padding-left: 40px;
+						padding-bottom: 5px;
+						padding-top: 6px;
+						position: relative;
+						cursor: pointer;
+						background-image: url(../img/orange-hex-btn.png);
+						background-size: contain;
+						background-repeat: no-repeat;
+						background-position: left;
+					}
+				}
+			}
+		}
+
+		.hp-cta-right {
+			padding: 0 10px 10px 5px;
+		}
+	}
+
+/*======================================================================================================================
 
 
+List Page Template
 
 
+======================================================================================================================*/
+
+.list-page-hero {
+	margin-top: 75px;
+	background-color: $green;
+
+	.list-page-hero-bg {
+		position: relative;
+		overflow: hidden;
+
+		&:after {
+			content: '';
+			background-image: url(../img/hero-bg.png);
+			position: absolute;
+			top: -250px;
+			right: 0;
+			width: 100%;
+			height: 1000px;
+			background-repeat: no-repeat;
+			background-position: top right;
+		}
+
+		h1 {
+			padding: 75px 0;
+			margin-bottom: 0;
+			color: $white;
+			max-width: 850px;
+		}
+	}
+}
+
+.list-side-bar {
+	background-color: $lighter-gray;
+}
+
+/*======================================================================================================================
 
 
+FOOTER
 
 
+======================================================================================================================*/
+
+	.main-footer {
+		padding-top: 75px;
+		padding-bottom: 0;
+		background-color: $darker-gray;
+
+		.footer-cols {
+			display: table;
+			width: 100%;
+			padding-bottom:50px;
+			border-bottom: 1px solid $dark-gray;
+
+			.footer-col {
+				
+				img.footer-logo {
+					max-width: 150px;
+					margin-bottom: 10px;
+				}
+
+				p {
+					font-size: 14px;
+					color: $gray;
+				}
+
+				ul {
+					list-style: none;
+					padding-left: 0;
+					
+					li {
+
+						a {
+							font-family: 'Avenir Next LT Pro Regular';
+							text-transform: uppercase;
+							color: $gray;
+							font-size: 12px;
+							letter-spacing: 1px;
+						}
+
+						a[href*="tel"] {
+							font-family: 'Avenir Next LT Pro Regular';
+							text-transform: uppercase;
+							font-size: 12px;
+							letter-spacing: 1px;
+							color: $lighter-gray;
+						}
+					}
+				}
+
+				a.footer-btn {
+					opacity: .75;
+					@include transition(.15s);
+					position: relative;
+					width: 100%;
+					height: 100%;
+					max-width: 300px;
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+
+					img {
+						max-width: 300px;
+						width: 100%;
+						opacity: .5;
+						@include transition(.15s);
+
+					}
+
+					&:after {
+						content: 'Request a demo';
+						font-family: 'Avenir Next LT Pro Regular';
+						text-transform: uppercase;
+						color: $orange;
+						font-size: 12px;
+						letter-spacing: 1px;
+						display: block;
+						position: absolute;
+						top: 43%;
+						text-align: center;
+						width: 100%;
+						height: 100%;
+					}
+
+					&:hover {
+						opacity: 1;
+
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+
+		.footer-copy {
+			padding: 15px 0;
+
+			.copyright p {
+				margin: 0;
+				font-size: 12px;
+				line-height: 25px;
+			}
+
+			.social-icons {
+				padding-bottom: 15px;
+
+				.social-icon {
+					text-align: right;
+
+					a {
+						img {
+							opacity: .75;
+							@include transition(.15s);
+
+							&:hover {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+/*======================================================================================================================
+
+
+MOBILE
+
+
+======================================================================================================================*/
+
+@media (max-width: 1199px) {
+	.container {
+		max-width: 100%;
+		padding: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	header .header-logo img {
+		margin-left: 30px;
+	}
+}
+
+@media (max-width: 991px) {
+	header .header-logo {
+		width: 150px;
+	}
+	.hp-content .hp-cta-left .hp-callout, .hp-content .hp-cta-right .hp-callout {
+		padding-top: 40px;
+	}
+	.hp-content .hp-cta-left, .hp-content .hp-cta-right {
+		padding: 10px;
+		padding-top: 0;
+	}
+	.footer-col:last-child {
+		margin-top: 25px;
+	}
+}
+
+@media (max-width: 767px) {
+	.main-footer .footer-cols .footer-col a.footer-btn {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 991px) {
+	.hidden-lg-up {
+		display: none!important;
+	}
+}
 
 
 

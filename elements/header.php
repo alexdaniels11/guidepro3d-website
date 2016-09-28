@@ -20,34 +20,44 @@
 
 
 
-
-<header>
-	<div class="container">
-		<div class="header-logo">
-			<a href="/"><img src="img/web-logo.png"></a>
-		</div>
-		<!-- begin navigation -->
-		<nav class="main-navigation">
-			<div class="menu-btn">
-				<a href="#">Request a demo</a>
+<div class="fixed-header">
+	<header>
+		<div class="container">
+			<div class="header-logo">
+				<a href="/"><img src="img/web-logo.png"></a>
 			</div>
+			<!-- begin navigation -->
+			<nav class="main-navigation hidden-md-down">
+				<div class="menu-btn">
+					<a href="#"><img class="menu-hex-btn" src="img/blue-hex-btn.png">Request a demo</a>
+				</div>
+				
+				<?php include ('elements/navigation.php') ?>
+
+			</nav>
+			<div id="openMobileNav" class="hidden-lg-up">
+				Open
+			</div>
+			<nav id="mobileNav" class="mobile-navigation hidden-lg-up">
+				<div class="mobile-nav-header">
+					<div class="mobile-nav-logo">
+						<img src="img/white-logo.png">
+					</div>
+					<div id="closeMobileNav">&times;</div>
+				</div>
+				<?php include ('elements/navigation.php') ?>
+
+			</nav>
+		</div>
+	</header>
+	<div class="container">
+		<div class="quick-nav">
 			<ul>
-				<li><a href="#">The GuidePro<sup>3D</sup> System</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">Resource Center</a></li>
-				<li><a href="#">Our Story</a></li>
-				<li><a href="#">Contact</a></li>
+				<span class="pull-xs-right">
+					<li><a class="header-search" href="#"><span class="search-icon"></span> Search</a></li>
+					<li><a class="header-login" href="#"><span class="login-icon"></span> Login</a></li>
+				</span>
 			</ul>
-		</nav>
-	</div>
-</header>
-<div class="container">
-	<div class="quick-nav">
-		<ul>
-			<span class="pull-xs-right">
-				<li><a class="header-search" href="#"><span class="search-icon"></span> Search</a></li>
-				<li><a class="header-login" href="#"><span class="login-icon"></span> Login</a></li>
-			</span>
-		</ul>
+		</div>
 	</div>
 </div>
