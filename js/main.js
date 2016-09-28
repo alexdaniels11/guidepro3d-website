@@ -15,13 +15,13 @@ $(window).scroll(function() {
 document.getElementById("openMobileNav").onclick = function() {openMobileNav()};
 
 function openMobileNav() {
-    document.getElementById("mobileNav").style.right = "0";
-    document.getElementsByTagName("body").className = "overflow-hidden";
+	document.getElementById("mobileNav").style.right = "0";
+	document.getElementById("myBody").className = "no-scroll";
 }
 
 document.getElementById("closeMobileNav").onclick = function() {closeMobileNav()};
 
 function closeMobileNav() {
-    document.getElementById("mobileNav").style.right = "-100%";
-    document.getElementsByTagName("body").className.replace("overflow-hidden", "");
+	document.getElementById("mobileNav").style.right = "-100%";
+	document.getElementById("myBody").className = "";
 }

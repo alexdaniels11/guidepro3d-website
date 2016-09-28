@@ -56,8 +56,9 @@ sup {
   left: .5px;
   font-size: 60%; }
 
-.overflow-hidden {
-  overflow: hidden; }
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Avenir Next LT Pro Bold', sans-serif;
@@ -107,6 +108,7 @@ HEADER
 ======================================================================================================================*/
 .fixed-header, .scrolling {
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1; }
   .fixed-header header, .scrolling header {
@@ -222,7 +224,45 @@ HEADER
             left: 10px;
             top: 17px; }
     .fixed-header header #openMobileNav, .scrolling header #openMobileNav {
-      float: right; }
+      float: right;
+      background-color: #00a8c6;
+      height: 65px;
+      -webkit-transition: 0.15s;
+      -moz-transition: 0.15s;
+      -ms-transition: 0.15s;
+      -o-transition: 0.15s;
+      transition: 0.15s; }
+      .fixed-header header #openMobileNav:hover, .scrolling header #openMobileNav:hover, .fixed-header header #openMobileNav:focus, .scrolling header #openMobileNav:focus {
+        background-color: #003D51; }
+      .fixed-header header #openMobileNav:before, .scrolling header #openMobileNav:before {
+        content: '';
+        position: absolute;
+        right: 74px;
+        width: 0;
+        height: 0;
+        border-bottom: 65px solid #00a8c6;
+        border-left: 50px solid transparent;
+        -webkit-transition: 0.15s;
+        -moz-transition: 0.15s;
+        -ms-transition: 0.15s;
+        -o-transition: 0.15s;
+        transition: 0.15s; }
+      .fixed-header header #openMobileNav:hover, .scrolling header #openMobileNav:hover, .fixed-header header #openMobileNav:focus, .scrolling header #openMobileNav:focus {
+        background-color: #003D51; }
+        .fixed-header header #openMobileNav:hover:before, .scrolling header #openMobileNav:hover:before, .fixed-header header #openMobileNav:focus:before, .scrolling header #openMobileNav:focus:before {
+          border-bottom: 65px solid #003D51; }
+      .fixed-header header #openMobileNav .hamburger, .scrolling header #openMobileNav .hamburger {
+        width: 75px; }
+        .fixed-header header #openMobileNav .hamburger .hamburger-divs, .scrolling header #openMobileNav .hamburger .hamburger-divs {
+          width: 30px;
+          padding-top: 20px;
+          margin-left: auto;
+          margin-right: auto; }
+          .fixed-header header #openMobileNav .hamburger .hamburger-divs .hamburger-div, .scrolling header #openMobileNav .hamburger .hamburger-divs .hamburger-div {
+            width: 100%;
+            height: 3px;
+            margin-bottom: 5px;
+            background-color: #fff; }
     .fixed-header header nav.mobile-navigation, .scrolling header nav.mobile-navigation {
       font-family: 'Avenir Next LT Pro Regular';
       text-transform: capitalize;
@@ -251,7 +291,8 @@ HEADER
           float: right;
           color: #8492A6;
           font-size: 65px;
-          line-height: 45px; }
+          line-height: 45px;
+          cursor: pointer; }
       .fixed-header header nav.mobile-navigation ul, .scrolling header nav.mobile-navigation ul {
         list-style: none;
         padding-left: 0;
@@ -270,6 +311,76 @@ HEADER
             transition: 0.15s; }
             .fixed-header header nav.mobile-navigation ul li a:hover, .scrolling header nav.mobile-navigation ul li a:hover {
               color: #D3DCE6; }
+      .fixed-header header nav.mobile-navigation .mobile-nav-footer, .scrolling header nav.mobile-navigation .mobile-nav-footer {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 20px; }
+        .fixed-header header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links, .scrolling header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links {
+          display: block;
+          font-size: 12px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          line-height: 30px;
+          color: #D3DCE6;
+          position: relative;
+          -webkit-transition: 0.25s;
+          -moz-transition: 0.25s;
+          -ms-transition: 0.25s;
+          -o-transition: 0.25s;
+          transition: 0.25s; }
+          .fixed-header header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links .search-icon, .scrolling header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links .search-icon {
+            background-image: url(../img/search.png);
+            padding-left: 18px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            top: -1px; }
+          .fixed-header header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links .login-icon, .scrolling header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links .login-icon {
+            background-image: url(../img/login.png);
+            padding-left: 18px;
+            height: 12px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            top: -2px; }
+        .fixed-header header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-btn, .scrolling header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-btn {
+          opacity: .75;
+          -webkit-transition: 0.15s;
+          -moz-transition: 0.15s;
+          -ms-transition: 0.15s;
+          -o-transition: 0.15s;
+          transition: 0.15s;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          max-width: 275px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto; }
+          .fixed-header header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-btn img, .scrolling header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-btn img {
+            max-width: 275px;
+            width: 100%;
+            opacity: .5;
+            -webkit-transition: 0.15s;
+            -moz-transition: 0.15s;
+            -ms-transition: 0.15s;
+            -o-transition: 0.15s;
+            transition: 0.15s; }
+          .fixed-header header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-btn:after, .scrolling header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-btn:after {
+            content: 'Request a demo';
+            font-family: 'Avenir Next LT Pro Regular';
+            text-transform: uppercase;
+            color: #00a8c6;
+            font-size: 12px;
+            letter-spacing: 1px;
+            display: block;
+            position: absolute;
+            top: 43%;
+            left: 20%;
+            width: 100%;
+            height: 100%; }
+        .fixed-header header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links:nth-child(2), .scrolling header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links:nth-child(2) {
+          margin-bottom: 10px; }
 
 .scrolling header {
   height: 65px; }
@@ -627,7 +738,7 @@ FOOTER
         display: block;
         position: absolute;
         top: 43%;
-        text-align: center;
+        left: 38%;
         width: 100%;
         height: 100%; }
       .main-footer .footer-cols .footer-col a.footer-btn:hover {
@@ -671,7 +782,10 @@ MOBILE
   header .header-logo img {
     margin-left: 30px; } }
 @media (max-width: 991px) {
-  header .header-logo {
+  .fixed-header header, .scrolling header {
+    height: 65px; }
+
+  .fixed-header header .header-logo, .scrolling header .header-logo {
     width: 150px; }
 
   .hp-content .hp-cta-left .hp-callout, .hp-content .hp-cta-right .hp-callout {

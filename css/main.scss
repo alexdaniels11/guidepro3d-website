@@ -64,8 +64,9 @@ GENERAL
 		font-size: 60%;
 	}
 
-	.overflow-hidden {
+	.no-scroll {
 		overflow: hidden;
+		height: 100vh;
 	}
 
 	@import 'partials/_typography';
@@ -81,6 +82,7 @@ HEADER
 
 	.fixed-header {
 		position: fixed;
+		top: 0;
 		width: 100%;
 		z-index: 1;
 
@@ -206,6 +208,50 @@ HEADER
 
 			#openMobileNav {
 					float: right;
+					background-color: $light-blue;
+					height: 65px;
+					@include transition(.15s);
+
+					&:hover, &:focus {
+						background-color: $blue;
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						right: 74px;
+						width: 0;
+						height: 0;
+						border-bottom: 65px solid $light-blue;
+						border-left: 50px solid transparent;
+						@include transition(.15s);
+					}
+
+					&:hover, &:focus {
+						background-color: $blue;
+
+						&:before {
+							border-bottom: 65px solid $blue;
+						}
+					}
+
+					.hamburger {
+						width: 75px;
+
+						.hamburger-divs {
+							width: 30px;
+							padding-top: 20px;
+							margin-left: auto;
+							margin-right: auto;
+
+							.hamburger-div {
+								width: 100%;
+								height: 3px;
+								margin-bottom: 5px;
+								background-color: $white;
+							}
+						}
+					}
 				}
 
 			nav.mobile-navigation {
@@ -239,6 +285,7 @@ HEADER
 						color: $gray;
 						font-size: 65px;
 						line-height: 45px;
+						cursor: pointer;
 					}
 				}
 
@@ -261,6 +308,81 @@ HEADER
 								color: $light-gray;
 							}
 						}
+					}
+				}
+
+				.mobile-nav-footer {
+					position: absolute;
+					bottom: 0;
+					margin-bottom: 20px;
+
+					a.mobile-nav-footer-links {
+						display: block;
+						font-size: 12px;
+						letter-spacing: 1px;
+						text-transform: uppercase;
+						line-height: 30px;
+						color: $light-gray;
+						position: relative;
+						@include transition(.25s);
+
+						.search-icon {
+							background-image: url(../img/search.png);
+							padding-left: 18px;
+							background-size: contain;
+							background-repeat: no-repeat;
+							position: relative;
+							top: -1px;
+						}
+
+						.login-icon {
+							background-image: url(../img/login.png);
+							padding-left: 18px;
+							height: 12px;
+							background-size: contain;
+							background-repeat: no-repeat;
+							position: relative;
+							top: -2px;
+						}
+					}
+
+					a.mobile-nav-footer-btn {
+						opacity: .75;
+						@include transition(.15s);
+						position: relative;
+						width: 100%;
+						height: 100%;
+						max-width: 275px;
+						display: block;
+						margin-left: auto;
+						margin-right: auto;
+
+						img {
+							max-width: 275px;
+							width: 100%;
+							opacity: .5;
+							@include transition(.15s);
+
+						}
+
+						&:after {
+							content: 'Request a demo';
+							font-family: 'Avenir Next LT Pro Regular';
+							text-transform: uppercase;
+							color: $light-blue;
+							font-size: 12px;
+							letter-spacing: 1px;
+							display: block;
+							position: absolute;
+							top: 43%;
+							left: 20%;
+							width: 100%;
+							height: 100%;
+						}
+					}
+
+					a.mobile-nav-footer-links:nth-child(2) {
+						margin-bottom: 10px;
 					}
 				}
 			}
@@ -701,7 +823,7 @@ FOOTER
 						display: block;
 						position: absolute;
 						top: 43%;
-						text-align: center;
+						left: 38%;
 						width: 100%;
 						height: 100%;
 					}
@@ -768,7 +890,10 @@ MOBILE
 }
 
 @media (max-width: 991px) {
-	header .header-logo {
+	.fixed-header header {
+		height: 65px;
+	}
+	.fixed-header header .header-logo {
 		width: 150px;
 	}
 	.hp-content .hp-cta-left .hp-callout, .hp-content .hp-cta-right .hp-callout {
