@@ -735,8 +735,17 @@ List Page Template
 	}
 }
 
-.list-side-bar {
-	background-color: $lighter-gray;
+.list-content {
+	height: 500px;
+	position: relative;
+
+	.list-col {
+		height: 100%;
+	}
+
+	.list-col.list-side-bar {
+		background-color: $lighter-gray;
+	}
 }
 
 /*======================================================================================================================

@@ -9,8 +9,8 @@
 	</div>
 </div>
 
-<div class="container">
-	<div class="col-md-3 list-side-bar">
+<div class="container list-content">
+	<div class="col-md-3 list-col list-side-bar">
 		<ul class="list-side-bar-items">
 			<h3>Event type:</h3>
 			<li>Seminars</li>
@@ -19,7 +19,7 @@
 			<li>Study Groups</li>
 		</ul>
 	</div>
-	<div class="col-md-9">
+	<div class="col-md-9 list-col">
 		<div class="row">
 			<table class="table">
 				<tbody>
@@ -52,7 +52,31 @@
 						<td>Seminar</td>
 						<td>Aug 27, 2016</td>
 						<td>Charlotte, NC</td>
-					</tr>   
+					</tr>
+					<tr class="list-row">
+						<td><a href="#">Emerging Tech in Oral Health</a></td>
+						<td>Seminar</td>
+						<td>Aug 27, 2016</td>
+						<td>Charlotte, NC</td>
+					</tr>
+					<tr class="list-row">
+						<td><a href="#">Emerging Tech in Oral Health</a></td>
+						<td>Seminar</td>
+						<td>Aug 27, 2016</td>
+						<td>Charlotte, NC</td>
+					</tr>
+					<tr class="list-row">
+						<td><a href="#">Emerging Tech in Oral Health</a></td>
+						<td>Seminar</td>
+						<td>Aug 27, 2016</td>
+						<td>Charlotte, NC</td>
+					</tr>
+					<tr class="list-row">
+						<td><a href="#">Emerging Tech in Oral Health</a></td>
+						<td>Seminar</td>
+						<td>Aug 27, 2016</td>
+						<td>Charlotte, NC</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
