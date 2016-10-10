@@ -869,9 +869,10 @@ TWO COLUMN PAGE
 		margin-top: 75px;
 		background-color: $light-blue;
 		background-image: url(../img/hero-bg-2.png);
-		background-size: contain;
+		background-size: 700px;
 		background-repeat: no-repeat;
 		background-position: 50px 150px;
+		background-attachment: fixed;
 
 		.left-col {
 			padding-top: 75px;
@@ -930,7 +931,7 @@ TWO COLUMN PAGE
 					background-repeat: no-repeat;
 					color: $darker-gray;
 					letter-spacing: 1px;
-					font-size: 36px;
+					font-size: 32px;
 				}
 
 				p {
@@ -1104,6 +1105,12 @@ MOBILE
 	}
 	header .header-logo img {
 		margin-left: 30px;
+	}
+	.two-col-page-hero .left-col p {
+		max-width: 375px
+	}
+	.two-col-page-hero .left-col {
+		padding-left: 50px;
 	}
 }
 
