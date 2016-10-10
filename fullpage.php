@@ -12,12 +12,7 @@
 <div class="full-page-content">
 	<div class="container">
 		<div class="col-lg-6 col-xs-12 full-page-left-col">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>The Perfect Restorative Trajectory is the position where the crown of an implant is placed due to its relationship to other teeth. An implant’s Perfect Restorative Trajectory is the position in the mouth where it feels natural for the patient, where it prevents food impaction, where it creates a natural aesthetic, and where it allows for a naturally anatomically shaped tooth.</p>
 		</div>
 		<div class="col-lg-6 col-xs-12">
 			<div class="img-responsive full-page-right-col row">
@@ -36,15 +31,10 @@
 		</div>
 	</div>
 </div>
-<div class="full-page-content">
+<div class="full-page-content background-light-blue">
 	<div class="container">
 		<div class="col-lg-6 col-xs-12 full-page-left-col">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>The Perfect Restorative Trajectory is found through a series of mathematical equations paired with a dentist’s saved preferences.  A dentist is able to confirm the trajectory in the bone through X-rays or a CT scan taken with the guide in place. Because guides are created in-office using the included a 3D printer, any final edits can be made to the guide up to minutes before surgery. It’s cost-effective and time-efficient.</p>
 		</div>
 		<div class="col-lg-6 col-xs-12">
 			<div class="img-responsive full-page-right-col row">
