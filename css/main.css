@@ -100,6 +100,22 @@ form {
     form input:focus, form textarea:focus {
       background-color: #fff;
       box-shadow: inset 0 0 0 1px #b0d23e; }
+  form input[type="checkbox"] {
+    width: 25px;
+    outline: none; }
+    form input[type="checkbox"]:focus {
+      background-color: #fff;
+      box-shadow: none; }
+  form input[type="checkbox"] + label {
+    width: calc(100% - 25px);
+    font-family: 'Avenir Next LT Pro Regular';
+    text-transform: uppercase; }
+    form input[type="checkbox"] + label:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 0; }
   form input[type="submit"], form button {
     font-family: 'Avenir Next LT Pro Regular';
     letter-spacing: 2px;
@@ -460,23 +476,6 @@ HEADER
         .fixed-header header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links:nth-child(2), .scrolling header nav.mobile-navigation .mobile-nav-footer a.mobile-nav-footer-links:nth-child(2) {
           margin-bottom: 10px; }
 
-.scrolling header {
-  height: 65px; }
-  .scrolling header .header-logo {
-    width: 150px; }
-  .scrolling header nav.main-navigation ul {
-    line-height: 65px; }
-  .scrolling header nav.main-navigation .menu-btn a {
-    line-height: 65px; }
-    .scrolling header nav.main-navigation .menu-btn a:before {
-      border-bottom: 65px solid #00a8c6; }
-    .scrolling header nav.main-navigation .menu-btn a:hover {
-      background-color: #003D51; }
-      .scrolling header nav.main-navigation .menu-btn a:hover:before {
-        border-bottom: 65px solid #003D51; }
-.scrolling .quick-nav {
-  top: -1px; }
-
 .quick-nav {
   position: relative;
   display: table;
@@ -614,6 +613,23 @@ HEADER
           position: relative;
           top: 7px; }
 
+.scrolling header {
+  height: 65px; }
+  .scrolling header .header-logo {
+    width: 150px; }
+  .scrolling header nav.main-navigation ul {
+    line-height: 65px; }
+  .scrolling header nav.main-navigation .menu-btn a {
+    line-height: 65px; }
+    .scrolling header nav.main-navigation .menu-btn a:before {
+      border-bottom: 65px solid #00a8c6; }
+    .scrolling header nav.main-navigation .menu-btn a:hover {
+      background-color: #003D51; }
+      .scrolling header nav.main-navigation .menu-btn a:hover:before {
+        border-bottom: 65px solid #003D51; }
+.scrolling .quick-nav {
+  top: -2px; }
+
 /*======================================================================================================================
 
 
@@ -729,17 +745,12 @@ List Page Template
   background-color: #77BC1F; }
   .list-page-hero .list-page-hero-bg {
     position: relative;
-    overflow: hidden; }
-    .list-page-hero .list-page-hero-bg:after {
-      content: '';
-      background-image: url(../img/hero-bg.png);
-      position: absolute;
-      top: -250px;
-      right: 0;
-      width: 100%;
-      height: 1000px;
-      background-repeat: no-repeat;
-      background-position: top right; }
+    overflow: hidden;
+    background-image: url(../img/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: 70% 75px;
+    background-size: 600px;
+    background-attachment: fixed; }
     .list-page-hero .list-page-hero-bg h1 {
       padding: 75px 0;
       margin-bottom: 0;
@@ -801,7 +812,7 @@ TWO COLUMN PAGE
       right: 0;
       width: 0;
       height: 0;
-      border-bottom: 513px solid #fff;
+      border-bottom: 507px solid #fff;
       border-left: 300px solid transparent; }
   .two-col-page-hero .right-col {
     background-color: #fff;
@@ -815,7 +826,7 @@ TWO COLUMN PAGE
       top: 0;
       right: -1500px;
       width: 1500px;
-      height: 513px;
+      height: 507px;
       background-color: #fff; }
     .two-col-page-hero .right-col .tel-link {
       padding-bottom: 30px; }
@@ -843,6 +854,70 @@ TWO COLUMN PAGE
     .two-col-callout p img {
       width: 50px;
       margin-right: 15px; }
+
+/*======================================================================================================================
+
+
+Default Page Template
+
+
+======================================================================================================================*/
+.default-page-hero {
+  margin-top: 75px;
+  background-color: #00a8c6; }
+  .default-page-hero .default-page-hero-bg {
+    position: relative;
+    overflow: hidden;
+    background-image: url(../img/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: 70% 75px;
+    background-size: 600px;
+    background-attachment: fixed; }
+    .default-page-hero .default-page-hero-bg h1 {
+      padding: 75px 0;
+      margin-bottom: 0;
+      color: #fff;
+      max-width: 850px; }
+    .default-page-hero .default-page-hero-bg h2, .default-page-hero .default-page-hero-bg h3, .default-page-hero .default-page-hero-bg h4, .default-page-hero .default-page-hero-bg h5, .default-page-hero .default-page-hero-bg h6, .default-page-hero .default-page-hero-bg p {
+      color: #fff; }
+
+.default-page-content {
+  padding: 75px 0; }
+
+.default-page-cta {
+  background-color: #EFF2F7;
+  padding: 50px 0; }
+  .default-page-cta .lead-text p {
+    font-family: 'Avenir Next LT Pro Demi', sans-serif;
+    color: #b0d23e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 24px; }
+  .default-page-cta p {
+    color: #1F2D3D; }
+  .default-page-cta .default-page-cta-btn a {
+    font-family: 'Avenir Next LT Pro Regular', sans-serif;
+    display: block;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #F98D29;
+    color: #fff;
+    padding: 15px 0 11px;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s; }
+    .default-page-cta .default-page-cta-btn a:hover {
+      background-color: #77BC1F; }
 
 /*======================================================================================================================
 

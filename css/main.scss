@@ -114,6 +114,30 @@ GENERAL
 			}
 		}
 
+		input[type="checkbox"] {
+			width: 25px;
+			outline: none;
+
+			&:focus {
+				background-color: $white;
+				box-shadow: none;
+			}
+		}
+
+		input[type="checkbox"] + label {
+			width: calc(100% - 25px);
+			font-family: 'Avenir Next LT Pro Regular';
+			text-transform: uppercase;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				border: 0;
+			}
+		}
+
 		input[type="submit"], button {
 			font-family: 'Avenir Next LT Pro Regular';
 			letter-spacing: 2px;
@@ -470,47 +494,6 @@ HEADER
 		}
 	}
 
-	.scrolling {
-		@extend .fixed-header;
-
-		header {
-			height: 65px;
-
-			.header-logo {
-				width: 150px;
-			}
-
-			nav.main-navigation {
-
-				ul {
-					line-height: 65px;
-				}
-
-				.menu-btn {
-					a {
-						line-height: 65px;
-
-						&:before {
-							border-bottom: 65px solid #00a8c6;
-						}
-
-						&:hover {
-							background-color: $blue;
-
-							&:before {
-								border-bottom: 65px solid $blue;
-							}
-						}
-					}
-				}
-			}
-		}
-
-		.quick-nav {
-			top: -1px;
-		}
-	}
-
 	.quick-nav {
 		position: relative;
 		display: table;
@@ -657,6 +640,47 @@ HEADER
 		}
 	}
 
+	.scrolling {
+		@extend .fixed-header;
+
+		header {
+			height: 65px;
+
+			.header-logo {
+				width: 150px;
+			}
+
+			nav.main-navigation {
+
+				ul {
+					line-height: 65px;
+				}
+
+				.menu-btn {
+					a {
+						line-height: 65px;
+
+						&:before {
+							border-bottom: 65px solid #00a8c6;
+						}
+
+						&:hover {
+							background-color: $blue;
+
+							&:before {
+								border-bottom: 65px solid $blue;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.quick-nav {
+			top: -2px;
+		}
+	}
+
 /*======================================================================================================================
 
 
@@ -799,18 +823,12 @@ List Page Template
 		.list-page-hero-bg {
 			position: relative;
 			overflow: hidden;
+			background-image: url(../img/hero-bg.png);
+			background-repeat: no-repeat;
+			background-position: 70% 75px;
+			background-size: 600px;
+			background-attachment: fixed;
 
-			&:after {
-				content: '';
-				background-image: url(../img/hero-bg.png);
-				position: absolute;
-				top: -250px;
-				right: 0;
-				width: 100%;
-				height: 1000px;
-				background-repeat: no-repeat;
-				background-position: top right;
-			}
 
 			h1 {
 				padding: 75px 0;
@@ -896,7 +914,7 @@ TWO COLUMN PAGE
 				right: 0;
 				width: 0;
 				height: 0;
-				border-bottom: 513px solid $white;
+				border-bottom: 507px solid $white;
 				border-left: 300px solid transparent;
 			}
 		}
@@ -914,7 +932,7 @@ TWO COLUMN PAGE
 				top: 0;
 				right: -1500px;
 				width: 1500px;
-				height: 513px;
+				height: 507px;
 				background-color: $white;
 			}
 
@@ -957,6 +975,86 @@ TWO COLUMN PAGE
 			}
 		}
 	}
+
+/*======================================================================================================================
+
+
+Default Page Template
+
+
+======================================================================================================================*/
+
+	.default-page-hero {
+		margin-top: 75px;
+		background-color: $light-blue;
+
+		.default-page-hero-bg {
+			position: relative;
+			overflow: hidden;
+			background-image: url(../img/hero-bg.png);
+			background-repeat: no-repeat;
+			background-position: 70% 75px;
+			background-size: 600px;
+			background-attachment: fixed;
+
+
+			h1 {
+				padding: 75px 0;
+				margin-bottom: 0;
+				color: $white;
+				max-width: 850px;
+			}
+
+			h2, h3, h4, h5, h6, p {
+				color: $white
+			}
+		}
+	}
+
+	.default-page-content {
+		padding: 75px 0;
+
+	}
+
+	.default-page-cta {
+			background-color: $lighter-gray;
+			padding: 50px 0;
+
+			.lead-text {
+				p {
+					font-family: 'Avenir Next LT Pro Demi', sans-serif;
+					color: $light-green;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					font-size: 24px;
+				}
+			}
+
+			p {
+				color: $darker-gray;
+			}
+
+			.default-page-cta-btn {
+				a {
+					font-family: 'Avenir Next LT Pro Regular', sans-serif;
+					display: block;
+					text-align: center;
+					width: 100%;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					background-color: $orange;
+					color: $white;
+					padding: 15px 0 11px;
+					text-decoration: none;
+					@include border-radius(4px);
+					@include transition(.15s);
+
+					&:hover {
+						background-color: $green;
+					}
+				}
+			}
+		}
 
 /*======================================================================================================================
 

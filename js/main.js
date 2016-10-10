@@ -10,6 +10,40 @@ $(window).scroll(function() {
     }
 });
 
+// Event List Selector
+
+$(document).ready(function(){
+
+    $('#seminar').change(function(){
+        if(this.checked)
+            $('.seminar').fadeIn('fast');
+        else
+            $('.seminar').fadeOut('fast');
+    });
+
+    $('#webinar').change(function(){
+        if(this.checked)
+            $('.webinar').fadeIn('fast');
+        else
+            $('.webinar').fadeOut('fast');
+    });
+
+    $('#tradeshow').change(function(){
+        if(this.checked)
+            $('.tradeshow').fadeIn('fast');
+        else
+            $('.tradeshow').fadeOut('fast');
+    });
+
+    $('#studygroup').change(function(){
+        if(this.checked)
+            $('.studygroup').fadeIn('fast');
+        else
+            $('.studygroup').fadeOut('fast');
+    });
+
+});
+
 // Mobile Menu
 
 document.getElementById("openMobileNav").onclick = function() {openMobileNav()};
