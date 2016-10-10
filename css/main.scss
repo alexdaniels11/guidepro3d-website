@@ -51,6 +51,7 @@ GENERAL
 		&:hover, &:focus, &:visited {
 			text-decoration: underline;
 			color: $blue;
+			outline: none;
 		}
 
 		&:visited {
@@ -67,6 +68,86 @@ GENERAL
 	.no-scroll {
 		overflow: hidden;
 		height: 100vh;
+	}
+
+	form {
+		width: 100%;
+		max-width: 600px;
+		display: table;
+
+		label {
+			width: 100px;
+			float: left;
+			margin-bottom: 0;
+			margin-top: 10px;
+			font-size: 12px;
+			color: $dark-gray;
+			height: 28px;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 100px;
+				top: 0;
+				width: 0;
+				height: 0;
+				border-top: 10px solid $white;
+				border-right: 10px solid transparent;
+			}
+		}
+		
+		input, textarea {
+			width: calc(100% - 100px);
+			float: left;
+			margin-top: 10px;
+			border: 0;
+			box-shadow: inset 0 0 0 1px transparent;
+			background-color: $lighter-gray;
+			padding: 10px 10px;
+			outline: none;
+			@include transition(.15s);
+
+			&:focus {
+				background-color: $white;
+				    box-shadow: inset  0 0 0 1px $light-green;
+			}
+		}
+
+		input[type="submit"], button {
+			font-family: 'Avenir Next LT Pro Regular';
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: $white;
+			float: left;
+			margin-top: 10px;
+			margin-left: 100px;
+			padding: 12px 50px 7px 25px;
+			width: auto;
+			background-color: $orange;
+			background-image: url(../img/paper-plane.png);
+			background-size: 15px 15px;
+			background-repeat: no-repeat;
+			background-position: 80% center;
+			border: 0;
+			box-shadow: inset 0 0 0 0 transparent;
+			outline: none;
+			@include transition(.15s);
+
+			&:hover {
+				background-color: $green;
+			}
+		}
+	}
+
+	::-webkit-input-placeholder {
+	  color: $gray;
+	  font-style: italic;
+	  @include transition(.15s);
+	}
+
+	:focus::-webkit-input-placeholder {
+		color: $light-gray;
 	}
 
 	@import 'partials/_typography';
@@ -424,9 +505,14 @@ HEADER
 				}
 			}
 		}
+
+		.quick-nav {
+			top: -1px;
+		}
 	}
 
 	.quick-nav {
+		position: relative;
 		display: table;
 		width: 100%;
 
@@ -706,47 +792,170 @@ List Page Template
 
 ======================================================================================================================*/
 
-.list-page-hero {
-	margin-top: 75px;
-	background-color: $green;
+	.list-page-hero {
+		margin-top: 75px;
+		background-color: $green;
 
-	.list-page-hero-bg {
+		.list-page-hero-bg {
+			position: relative;
+			overflow: hidden;
+
+			&:after {
+				content: '';
+				background-image: url(../img/hero-bg.png);
+				position: absolute;
+				top: -250px;
+				right: 0;
+				width: 100%;
+				height: 1000px;
+				background-repeat: no-repeat;
+				background-position: top right;
+			}
+
+			h1 {
+				padding: 75px 0;
+				margin-bottom: 0;
+				color: $white;
+				max-width: 850px;
+			}
+		}
+	}
+
+	.list-content {
+		height: 500px;
 		position: relative;
-		overflow: hidden;
 
-		&:after {
-			content: '';
-			background-image: url(../img/hero-bg.png);
-			position: absolute;
-			top: -250px;
-			right: 0;
-			width: 100%;
-			height: 1000px;
-			background-repeat: no-repeat;
-			background-position: top right;
+		.list-col {
+			height: 100%;
+			padding-top: 25px;
+
+			.table {
+				td, th {
+					border-bottom: 1px solid #eceeef;
+					border-top: 0;
+				}
+			}
 		}
 
-		h1 {
-			padding: 75px 0;
-			margin-bottom: 0;
-			color: $white;
-			max-width: 850px;
+		.list-col.list-side-bar {
+			background-color: $lighter-gray;
+			padding-top: 25px;
+
+			.list-side-bar-items {
+				list-style: none;
+
+				h3 {
+					font-family: 'Merriweather', serif;
+					font-size: 14px;
+					line-height: 24px;
+					text-transform: capitalize;
+					color: $gray;
+					letter-spacing: inherit;
+					font-weight: 800;
+				}
+			}
 		}
 	}
-}
 
-.list-content {
-	height: 500px;
-	position: relative;
+/*======================================================================================================================
 
-	.list-col {
-		height: 100%;
+
+TWO COLUMN PAGE
+
+
+======================================================================================================================*/
+
+	.two-col-page-hero {
+		margin-top: 75px;
+		background-color: $light-blue;
+		background-image: url(../img/hero-bg-2.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50px 150px;
+
+		.left-col {
+			padding-top: 75px;
+			padding-bottom: 75px;
+			position: relative;
+			display: table;
+
+			h1 {
+				color: $white;
+			}
+
+			p {
+				color: $white;
+				max-width: 450px;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 0;
+				height: 0;
+				border-bottom: 513px solid $white;
+				border-left: 300px solid transparent;
+			}
+		}
+
+		.right-col {
+			background-color: $white;
+			padding-top: 75px;
+			padding-bottom: 75px;
+			position: relative;
+			display: table;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: -1500px;
+				width: 1500px;
+				height: 513px;
+				background-color: $white;
+			}
+
+			.tel-link {
+				padding-bottom: 30px;
+
+				a {
+					font-family: 'Avenir Next LT Pro Regular', sans-serif;
+					padding-left: 40px;
+					margin-left: 60px;
+					background-image: url(../img/phone.png);
+					background-position: left 25%;
+					background-size: 25px;
+					background-repeat: no-repeat;
+					color: $darker-gray;
+					letter-spacing: 1px;
+					font-size: 36px;
+				}
+
+				p {
+					padding-left: 100px;
+
+				}
+			}
+		}
 	}
 
-	.list-col.list-side-bar {
+	.two-col-callout {
 		background-color: $lighter-gray;
+		padding: 50px 0;
+
+		p {
+			margin: 0;
+			text-align: center;
+			color: $darker-gray;
+
+			img {
+				width: 50px;
+				margin-right: 15px;
+			}
+		}
 	}
-}
 
 /*======================================================================================================================
 
@@ -915,6 +1124,40 @@ MOBILE
 	.footer-col:last-child {
 		margin-top: 25px;
 	}
+	.list-page-hero {
+		margin-top: 65px;
+	}
+	.two-col-page-hero {
+		margin-top: 65px;
+	}
+	.hero-area {
+		margin-top: 65px;
+	}
+	.left-col, .right-col {
+		&:after {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 414px) {
+	.two-col-page-hero .right-col .tel-link a {
+		font-size: 22px;
+		background-size: 20px;
+	}
+	.two-col-callout p img {
+		width: 50px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.two-col-callout p img {
+		width: 100px;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}	
 }
 
 @media (max-width: 767px) {
@@ -923,7 +1166,7 @@ MOBILE
 	}
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
 	.hidden-lg-up {
 		display: none!important;
 	}

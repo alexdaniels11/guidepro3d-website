@@ -31,7 +31,19 @@
 					</tr>
 					<tr class="list-row">
 						<td><a href="#">Emerging Tech in Oral Health</a></td>
-						<td>Seminar</td>
+						<td>Webinar</td>
+						<td>Aug 27, 2016</td>
+						<td>Charlotte, NC</td>
+					</tr> 
+					<tr class="list-row">
+						<td><a href="#">Emerging Tech in Oral Health</a></td>
+						<td>Trade Show</td>
+						<td>Aug 27, 2016</td>
+						<td>Charlotte, NC</td>
+					</tr> 
+					<tr class="list-row">
+						<td><a href="#">Emerging Tech in Oral Health</a></td>
+						<td>Study Group</td>
 						<td>Aug 27, 2016</td>
 						<td>Charlotte, NC</td>
 					</tr> 
@@ -40,40 +52,28 @@
 						<td>Seminar</td>
 						<td>Aug 27, 2016</td>
 						<td>Charlotte, NC</td>
-					</tr> 
+					</tr>
 					<tr class="list-row">
 						<td><a href="#">Emerging Tech in Oral Health</a></td>
-						<td>Seminar</td>
-						<td>Aug 27, 2016</td>
-						<td>Charlotte, NC</td>
-					</tr> 
-					<tr class="list-row">
-						<td><a href="#">Emerging Tech in Oral Health</a></td>
-						<td>Seminar</td>
+						<td>Webinar</td>
 						<td>Aug 27, 2016</td>
 						<td>Charlotte, NC</td>
 					</tr>
 					<tr class="list-row">
 						<td><a href="#">Emerging Tech in Oral Health</a></td>
-						<td>Seminar</td>
+						<td>Study Group</td>
 						<td>Aug 27, 2016</td>
 						<td>Charlotte, NC</td>
 					</tr>
 					<tr class="list-row">
 						<td><a href="#">Emerging Tech in Oral Health</a></td>
-						<td>Seminar</td>
+						<td>Trade Show</td>
 						<td>Aug 27, 2016</td>
 						<td>Charlotte, NC</td>
 					</tr>
 					<tr class="list-row">
 						<td><a href="#">Emerging Tech in Oral Health</a></td>
-						<td>Seminar</td>
-						<td>Aug 27, 2016</td>
-						<td>Charlotte, NC</td>
-					</tr>
-					<tr class="list-row">
-						<td><a href="#">Emerging Tech in Oral Health</a></td>
-						<td>Seminar</td>
+						<td>Webinar</td>
 						<td>Aug 27, 2016</td>
 						<td>Charlotte, NC</td>
 					</tr>

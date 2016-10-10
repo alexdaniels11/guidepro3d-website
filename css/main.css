@@ -47,7 +47,8 @@ a {
   text-decoration: none; }
   a:hover, a:focus, a:visited {
     text-decoration: underline;
-    color: #003D51; }
+    color: #003D51;
+    outline: none; }
   a:visited {
     color: #F98D29; }
 
@@ -59,6 +60,83 @@ sup {
 .no-scroll {
   overflow: hidden;
   height: 100vh; }
+
+form {
+  width: 100%;
+  max-width: 600px;
+  display: table; }
+  form label {
+    width: 100px;
+    float: left;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #3C4858;
+    height: 28px;
+    position: relative; }
+    form label:after {
+      content: '';
+      position: absolute;
+      left: 100px;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 10px solid #fff;
+      border-right: 10px solid transparent; }
+  form input, form textarea {
+    width: calc(100% - 100px);
+    float: left;
+    margin-top: 10px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px transparent;
+    background-color: #EFF2F7;
+    padding: 10px 10px;
+    outline: none;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s; }
+    form input:focus, form textarea:focus {
+      background-color: #fff;
+      box-shadow: inset 0 0 0 1px #b0d23e; }
+  form input[type="submit"], form button {
+    font-family: 'Avenir Next LT Pro Regular';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    float: left;
+    margin-top: 10px;
+    margin-left: 100px;
+    padding: 12px 50px 7px 25px;
+    width: auto;
+    background-color: #F98D29;
+    background-image: url(../img/paper-plane.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    border: 0;
+    box-shadow: inset 0 0 0 0 transparent;
+    outline: none;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -ms-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s; }
+    form input[type="submit"]:hover, form button:hover {
+      background-color: #77BC1F; }
+
+::-webkit-input-placeholder {
+  color: #8492A6;
+  font-style: italic;
+  -webkit-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -ms-transition: 0.15s;
+  -o-transition: 0.15s;
+  transition: 0.15s; }
+
+:focus::-webkit-input-placeholder {
+  color: #D3DCE6; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Avenir Next LT Pro Bold', sans-serif;
@@ -396,8 +474,11 @@ HEADER
       background-color: #003D51; }
       .scrolling header nav.main-navigation .menu-btn a:hover:before {
         border-bottom: 65px solid #003D51; }
+.scrolling .quick-nav {
+  top: -1px; }
 
 .quick-nav {
+  position: relative;
   display: table;
   width: 100%; }
   .quick-nav ul {
@@ -669,9 +750,98 @@ List Page Template
   height: 500px;
   position: relative; }
   .list-content .list-col {
-    height: 100%; }
+    height: 100%;
+    padding-top: 25px; }
+    .list-content .list-col .table td, .list-content .list-col .table th {
+      border-bottom: 1px solid #eceeef;
+      border-top: 0; }
   .list-content .list-col.list-side-bar {
-    background-color: #EFF2F7; }
+    background-color: #EFF2F7;
+    padding-top: 25px; }
+    .list-content .list-col.list-side-bar .list-side-bar-items {
+      list-style: none; }
+      .list-content .list-col.list-side-bar .list-side-bar-items h3 {
+        font-family: 'Merriweather', serif;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #8492A6;
+        letter-spacing: inherit;
+        font-weight: 800; }
+
+/*======================================================================================================================
+
+
+TWO COLUMN PAGE
+
+
+======================================================================================================================*/
+.two-col-page-hero {
+  margin-top: 75px;
+  background-color: #00a8c6;
+  background-image: url(../img/hero-bg-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50px 150px; }
+  .two-col-page-hero .left-col {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    position: relative;
+    display: table; }
+    .two-col-page-hero .left-col h1 {
+      color: #fff; }
+    .two-col-page-hero .left-col p {
+      color: #fff;
+      max-width: 450px; }
+    .two-col-page-hero .left-col:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 513px solid #fff;
+      border-left: 300px solid transparent; }
+  .two-col-page-hero .right-col {
+    background-color: #fff;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    position: relative;
+    display: table; }
+    .two-col-page-hero .right-col:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1500px;
+      width: 1500px;
+      height: 513px;
+      background-color: #fff; }
+    .two-col-page-hero .right-col .tel-link {
+      padding-bottom: 30px; }
+      .two-col-page-hero .right-col .tel-link a {
+        font-family: 'Avenir Next LT Pro Regular', sans-serif;
+        padding-left: 40px;
+        margin-left: 60px;
+        background-image: url(../img/phone.png);
+        background-position: left 25%;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        color: #1F2D3D;
+        letter-spacing: 1px;
+        font-size: 36px; }
+      .two-col-page-hero .right-col .tel-link p {
+        padding-left: 100px; }
+
+.two-col-callout {
+  background-color: #EFF2F7;
+  padding: 50px 0; }
+  .two-col-callout p {
+    margin: 0;
+    text-align: center;
+    color: #1F2D3D; }
+    .two-col-callout p img {
+      width: 50px;
+      margin-right: 15px; }
 
 /*======================================================================================================================
 
@@ -801,11 +971,37 @@ MOBILE
     padding-top: 0; }
 
   .footer-col:last-child {
-    margin-top: 25px; } }
+    margin-top: 25px; }
+
+  .list-page-hero {
+    margin-top: 65px; }
+
+  .two-col-page-hero {
+    margin-top: 65px; }
+
+  .hero-area {
+    margin-top: 65px; }
+
+  .left-col:after, .right-col:after {
+    display: none; } }
+@media (max-width: 414px) {
+  .two-col-page-hero .right-col .tel-link a {
+    font-size: 22px;
+    background-size: 20px; }
+
+  .two-col-callout p img {
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto; } }
+@media (max-width: 768px) {
+  .two-col-callout p img {
+    width: 100px;
+    margin-right: 0;
+    margin-bottom: 20px; } }
 @media (max-width: 767px) {
   .main-footer .footer-cols .footer-col a.footer-btn {
     margin-left: 0; } }
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   .hidden-lg-up {
     display: none !important; } }
 
