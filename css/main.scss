@@ -70,6 +70,57 @@ GENERAL
 		height: 100vh;
 	}
 
+	.img-responsive {
+		img {
+			width: 100%
+		}
+	}
+
+	.row {
+		&:after {
+			display: inline-block;
+		}
+	}
+
+	.gp-btn {
+		font-family: 'Avenir Next LT Pro Demi';
+		text-transform: uppercase;
+		position: relative;
+		clear: both;
+
+		a {
+			color: #fff;
+			background-color: $orange;
+			display: inline-block;
+			line-height: 75px;
+			padding-left: 25px;
+			padding-right: 25px;
+			font-size: 16px;
+			letter-spacing: 2px;
+			text-decoration: none;
+			@include transition(.25s);
+
+			&:after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				margin-left: 25px; 
+				border-top: 75px solid $orange;
+				border-right: 50px solid transparent;
+				@include transition(.25s);
+			}
+
+			&:hover {
+				background-color: $green;
+
+				&:after {
+					border-top: 75px solid $green;
+				}
+			}
+		}
+	}
+
 	form {
 		width: 100%;
 		max-width: 600px;
@@ -830,11 +881,15 @@ List Page Template
 			background-attachment: fixed;
 
 
-			h1 {
-				padding: 75px 0;
+			.list-page-hero-content {
+				padding-top: 75px;
+				padding-bottom: 75px;
 				margin-bottom: 0;
-				color: $white;
 				max-width: 850px;
+			}
+
+			h1, h2, h3, h4, h5, h6, p {
+				color: $white
 			}
 		}
 	}
@@ -962,7 +1017,8 @@ TWO COLUMN PAGE
 
 	.two-col-callout {
 		background-color: $lighter-gray;
-		padding: 50px 0;
+		padding-top: 50px;
+		padding-bottom: 50px;
 
 		p {
 			margin: 0;
@@ -998,63 +1054,164 @@ Default Page Template
 			background-attachment: fixed;
 
 
-			h1 {
-				padding: 75px 0;
+			.default-page-hero-content {
+				padding-top: 75px;
+				padding-bottom: 75px;
 				margin-bottom: 0;
-				color: $white;
 				max-width: 850px;
 			}
 
-			h2, h3, h4, h5, h6, p {
+			h1, h2, h3, h4, h5, h6, p {
 				color: $white
 			}
 		}
 	}
 
 	.default-page-content {
-		padding: 75px 0;
+		padding-top: 75px;
+		padding-bottom: 75px;
 
 	}
 
 	.default-page-cta {
-			background-color: $lighter-gray;
-			padding: 50px 0;
+		background-color: $lighter-gray;
+		padding-top: 50px;
+		padding-bottom: 50px;
 
-			.lead-text {
-				p {
-					font-family: 'Avenir Next LT Pro Demi', sans-serif;
-					color: $light-green;
-					text-transform: uppercase;
-					letter-spacing: 1px;
-					font-size: 24px;
-				}
-			}
-
+		.lead-text {
 			p {
-				color: $darker-gray;
+				font-family: 'Avenir Next LT Pro Demi', sans-serif;
+				color: $light-green;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 24px;
 			}
+		}
 
-			.default-page-cta-btn {
-				a {
-					font-family: 'Avenir Next LT Pro Regular', sans-serif;
-					display: block;
-					text-align: center;
-					width: 100%;
-					letter-spacing: 1px;
-					text-transform: uppercase;
-					background-color: $orange;
-					color: $white;
-					padding: 15px 0 11px;
-					text-decoration: none;
-					@include border-radius(4px);
-					@include transition(.15s);
+		p {
+			color: $darker-gray;
+		}
 
-					&:hover {
-						background-color: $green;
-					}
+		.default-page-cta-btn {
+			a {
+				font-family: 'Avenir Next LT Pro Regular', sans-serif;
+				display: block;
+				text-align: center;
+				width: 100%;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				background-color: $orange;
+				color: $white;
+				padding: 15px 0 11px;
+				text-decoration: none;
+				@include border-radius(4px);
+				@include transition(.15s);
+
+				&:hover {
+					background-color: $green;
 				}
 			}
 		}
+	}
+
+/*======================================================================================================================
+
+
+Full Page Template
+
+
+======================================================================================================================*/
+
+	.full-page-hero {
+		margin-top: 75px;
+		background-color: $lighter-gray;
+
+		.full-page-hero-bg {
+			position: relative;
+			overflow: hidden;
+			background-image: url(../img/hero-bg.png);
+			background-repeat: no-repeat;
+			background-position: 70% 75px;
+			background-size: 600px;
+			background-attachment: fixed;
+
+
+			.full-page-hero-content {
+				margin-bottom: 0;
+				color: $darker-gray;
+				max-width: 850px;
+				padding-top: 75px;
+				padding-bottom: 75px;
+			}
+
+			h1, h2, h3, h4, h5, h6, {
+				color: $darker-gray
+			}
+
+			p {
+				color: $gray;
+			}
+		}
+	}
+
+	.full-page-content {
+
+		.full-page-left-col {
+			padding-top: 75px;
+			padding-bottom: 75px;
+		}
+
+		.full-page-right-col {
+			position: relative;
+
+			&:after {
+				content: '';
+				background-image: url(../img/left.png);
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	.full-page-callout {
+		background-color: $lighter-gray;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background-image: url(../img/hero-bg.png);
+		background-repeat: no-repeat;
+		background-position: 70% 75px;
+		background-size: 600px;
+		background-attachment: fixed;
+
+		.callout {
+
+			p {
+				margin: 0;
+				text-align: center;
+				color: $darker-gray;
+
+				img {
+					width: 100px;
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 25px;
+				}
+			}
+		}
+
+		.single-callout {
+			@extend .callout;
+
+			p {
+				margin-bottom: 50px;
+			}
+		}
+	}
 
 /*======================================================================================================================
 
@@ -1157,7 +1314,8 @@ FOOTER
 		}
 
 		.footer-copy {
-			padding: 15px 0;
+			padding-top: 15px;
+			padding-bottom: 15px;
 
 			.copyright p {
 				margin: 0;
@@ -1229,40 +1387,63 @@ MOBILE
 	.footer-col:last-child {
 		margin-top: 25px;
 	}
-	.list-page-hero {
+	.list-page-hero, .two-col-page-hero, .full-page-hero, .hero-area {
 		margin-top: 65px;
 	}
-	.two-col-page-hero {
-		margin-top: 65px;
-	}
-	.hero-area {
-		margin-top: 65px;
-	}
-	.left-col, .right-col {
+	.left-col, .right-col, .full-page-right-col {
 		&:after {
 			display: none;
 		}
 	}
+	.full-page-right-col img {
+		object-fit: cover;
+		height: 300px;
+		object-position: center bottom;
+	}
+}
+
+@media (max-width: 767px) {
+	.hero-area .hero-img img {
+		width: 175px;
+		margin-bottom: 25px;
+	}
+	.two-col-callout p img, .full-page-callout p img {
+		width: 100px;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.full-page-callout .callout {
+		width: 85%;
+		margin-left: 7.5%;
+		margin-right: 7.5%;
+	}
+	.full-page-callout .callout:nth-child(1) {
+		padding-bottom: 50px;
+	}
 }
 
 @media (max-width: 414px) {
+	h1 {
+		font-size: 28px;
+	}
+	h2 {
+		font-size: 24px
+	}
+	h3 {
+		font-size: 20px;
+	}
+	h4 {
+		font-size: 16px
+	}
 	.two-col-page-hero .right-col .tel-link a {
 		font-size: 22px;
 		background-size: 20px;
 	}
-	.two-col-callout p img {
+	.two-col-callout p img, .full-page-callout p img {
 		width: 50px;
 		margin-left: auto;
 		margin-right: auto;
 	}
-}
-
-@media (max-width: 768px) {
-	.two-col-callout p img {
-		width: 100px;
-		margin-right: 0;
-		margin-bottom: 20px;
-	}	
 }
 
 @media (max-width: 767px) {

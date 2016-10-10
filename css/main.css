@@ -61,6 +61,50 @@ sup {
   overflow: hidden;
   height: 100vh; }
 
+.img-responsive img {
+  width: 100%; }
+
+.row:after {
+  display: inline-block; }
+
+.gp-btn {
+  font-family: 'Avenir Next LT Pro Demi';
+  text-transform: uppercase;
+  position: relative;
+  clear: both; }
+  .gp-btn a {
+    color: #fff;
+    background-color: #F98D29;
+    display: inline-block;
+    line-height: 75px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s; }
+    .gp-btn a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      margin-left: 25px;
+      border-top: 75px solid #F98D29;
+      border-right: 50px solid transparent;
+      -webkit-transition: 0.25s;
+      -moz-transition: 0.25s;
+      -ms-transition: 0.25s;
+      -o-transition: 0.25s;
+      transition: 0.25s; }
+    .gp-btn a:hover {
+      background-color: #77BC1F; }
+      .gp-btn a:hover:after {
+        border-top: 75px solid #77BC1F; }
+
 form {
   width: 100%;
   max-width: 600px;
@@ -751,11 +795,13 @@ List Page Template
     background-position: 70% 75px;
     background-size: 600px;
     background-attachment: fixed; }
-    .list-page-hero .list-page-hero-bg h1 {
-      padding: 75px 0;
+    .list-page-hero .list-page-hero-bg .list-page-hero-content {
+      padding-top: 75px;
+      padding-bottom: 75px;
       margin-bottom: 0;
-      color: #fff;
       max-width: 850px; }
+    .list-page-hero .list-page-hero-bg h1, .list-page-hero .list-page-hero-bg h2, .list-page-hero .list-page-hero-bg h3, .list-page-hero .list-page-hero-bg h4, .list-page-hero .list-page-hero-bg h5, .list-page-hero .list-page-hero-bg h6, .list-page-hero .list-page-hero-bg p {
+      color: #fff; }
 
 .list-content {
   height: 500px;
@@ -846,7 +892,8 @@ TWO COLUMN PAGE
 
 .two-col-callout {
   background-color: #EFF2F7;
-  padding: 50px 0; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   .two-col-callout p {
     margin: 0;
     text-align: center;
@@ -873,20 +920,22 @@ Default Page Template
     background-position: 70% 75px;
     background-size: 600px;
     background-attachment: fixed; }
-    .default-page-hero .default-page-hero-bg h1 {
-      padding: 75px 0;
+    .default-page-hero .default-page-hero-bg .default-page-hero-content {
+      padding-top: 75px;
+      padding-bottom: 75px;
       margin-bottom: 0;
-      color: #fff;
       max-width: 850px; }
-    .default-page-hero .default-page-hero-bg h2, .default-page-hero .default-page-hero-bg h3, .default-page-hero .default-page-hero-bg h4, .default-page-hero .default-page-hero-bg h5, .default-page-hero .default-page-hero-bg h6, .default-page-hero .default-page-hero-bg p {
+    .default-page-hero .default-page-hero-bg h1, .default-page-hero .default-page-hero-bg h2, .default-page-hero .default-page-hero-bg h3, .default-page-hero .default-page-hero-bg h4, .default-page-hero .default-page-hero-bg h5, .default-page-hero .default-page-hero-bg h6, .default-page-hero .default-page-hero-bg p {
       color: #fff; }
 
 .default-page-content {
-  padding: 75px 0; }
+  padding-top: 75px;
+  padding-bottom: 75px; }
 
 .default-page-cta {
   background-color: #EFF2F7;
-  padding: 50px 0; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   .default-page-cta .lead-text p {
     font-family: 'Avenir Next LT Pro Demi', sans-serif;
     color: #b0d23e;
@@ -918,6 +967,72 @@ Default Page Template
     transition: 0.15s; }
     .default-page-cta .default-page-cta-btn a:hover {
       background-color: #77BC1F; }
+
+/*======================================================================================================================
+
+
+Full Page Template
+
+
+======================================================================================================================*/
+.full-page-hero {
+  margin-top: 75px;
+  background-color: #EFF2F7; }
+  .full-page-hero .full-page-hero-bg {
+    position: relative;
+    overflow: hidden;
+    background-image: url(../img/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: 70% 75px;
+    background-size: 600px;
+    background-attachment: fixed; }
+    .full-page-hero .full-page-hero-bg .full-page-hero-content {
+      margin-bottom: 0;
+      color: #1F2D3D;
+      max-width: 850px;
+      padding-top: 75px;
+      padding-bottom: 75px; }
+    .full-page-hero .full-page-hero-bg h1, .full-page-hero .full-page-hero-bg h2, .full-page-hero .full-page-hero-bg h3, .full-page-hero .full-page-hero-bg h4, .full-page-hero .full-page-hero-bg h5, .full-page-hero .full-page-hero-bg h6 {
+      color: #1F2D3D; }
+    .full-page-hero .full-page-hero-bg p {
+      color: #8492A6; }
+
+.full-page-content .full-page-left-col {
+  padding-top: 75px;
+  padding-bottom: 75px; }
+.full-page-content .full-page-right-col {
+  position: relative; }
+  .full-page-content .full-page-right-col:after {
+    content: '';
+    background-image: url(../img/left.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.full-page-callout {
+  background-color: #EFF2F7;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(../img/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: 70% 75px;
+  background-size: 600px;
+  background-attachment: fixed; }
+  .full-page-callout .callout p, .full-page-callout .single-callout p {
+    margin: 0;
+    text-align: center;
+    color: #1F2D3D; }
+    .full-page-callout .callout p img, .full-page-callout .single-callout p img {
+      width: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px; }
+  .full-page-callout .single-callout p {
+    margin-bottom: 50px; }
 
 /*======================================================================================================================
 
@@ -997,7 +1112,8 @@ FOOTER
         .main-footer .footer-cols .footer-col a.footer-btn:hover img {
           opacity: 1; }
   .main-footer .footer-copy {
-    padding: 15px 0; }
+    padding-top: 15px;
+    padding-bottom: 15px; }
     .main-footer .footer-copy .copyright p {
       margin: 0;
       font-size: 12px;
@@ -1055,31 +1171,54 @@ MOBILE
   .footer-col:last-child {
     margin-top: 25px; }
 
-  .list-page-hero {
+  .list-page-hero, .two-col-page-hero, .full-page-hero, .hero-area {
     margin-top: 65px; }
 
-  .two-col-page-hero {
-    margin-top: 65px; }
+  .left-col:after, .right-col:after, .full-page-right-col:after {
+    display: none; }
 
-  .hero-area {
-    margin-top: 65px; }
+  .full-page-right-col img {
+    object-fit: cover;
+    height: 300px;
+    object-position: center bottom; } }
+@media (max-width: 767px) {
+  .hero-area .hero-img img {
+    width: 175px;
+    margin-bottom: 25px; }
 
-  .left-col:after, .right-col:after {
-    display: none; } }
+  .two-col-callout p img, .full-page-callout p img {
+    width: 100px;
+    margin-right: 0;
+    margin-bottom: 20px; }
+
+  .full-page-callout .callout, .full-page-callout .single-callout {
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%; }
+
+  .full-page-callout .callout:nth-child(1), .full-page-callout .single-callout:nth-child(1) {
+    padding-bottom: 50px; } }
 @media (max-width: 414px) {
+  h1 {
+    font-size: 28px; }
+
+  h2 {
+    font-size: 24px; }
+
+  h3 {
+    font-size: 20px; }
+
+  h4 {
+    font-size: 16px; }
+
   .two-col-page-hero .right-col .tel-link a {
     font-size: 22px;
     background-size: 20px; }
 
-  .two-col-callout p img {
+  .two-col-callout p img, .full-page-callout p img {
     width: 50px;
     margin-left: auto;
     margin-right: auto; } }
-@media (max-width: 768px) {
-  .two-col-callout p img {
-    width: 100px;
-    margin-right: 0;
-    margin-bottom: 20px; } }
 @media (max-width: 767px) {
   .main-footer .footer-cols .footer-col a.footer-btn {
     margin-left: 0; } }

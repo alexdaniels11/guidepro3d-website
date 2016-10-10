@@ -3,7 +3,9 @@
 <div class="default-page-hero">
 	<div class="container">
 		<div class="default-page-hero-bg col-xs-12">
-			<h1>Here is your GuidePro<sup>3D</sup> default template</h1>
+			<div class="default-page-hero-content">
+				<h1>Here is your GuidePro<sup>3D</sup> default template</h1>
+			</div>
 		</div>
 	</div>
 </div>

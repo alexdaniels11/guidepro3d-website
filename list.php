@@ -4,7 +4,9 @@
 <div class="list-page-hero">
 	<div class="container">
 		<div class="list-page-hero-bg col-xs-12">
-			<h1>Discover more about GuidePro<sup>3D</sup> at an Upcoming Event</h1>
+			<div class="list-page-hero-content">
+				<h1>Discover more about GuidePro<sup>3D</sup> at an Upcoming Event</h1>
+			</div>
 		</div>
 	</div>
 </div>
