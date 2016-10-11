@@ -4,7 +4,7 @@
 <div class="hero-area">
 	<div class="container">
 		<div class="col-xs-12">
-			<div class="hero-text col-md-7">
+			<div class="col-md-7">
 				<h1>The Dental Implant Guide System that Revolutionizes the way Implant Surgery is Done.</h1>
 				<p>With a focus on making dental implant surgery “guided every time,” GuidePro3D is the most cost-efficient, easy to use, alterable, and verifiable implant guide system on the market. Built by dentists for dentists, GuidePro3D allows dentists to design The Perfect Restorative Trajectory and create implant surgical guides in their office in a matter of minutes.</p>
 			</div>

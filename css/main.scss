@@ -74,6 +74,10 @@ GENERAL
 		}
 	}
 
+	.background-lighter-gray {
+		background-color: $lighter-gray;
+	}
+
 	.no-scroll {
 		overflow: hidden;
 		height: 100vh;
@@ -737,7 +741,7 @@ HEADER
 		}
 
 		.quick-nav {
-			top: -2px;
+			top: -1px;
 		}
 	}
 
@@ -1071,7 +1075,7 @@ Default Page Template
 			}
 
 			h1, h2, h3, h4, h5, h6, p {
-				color: $white
+				color: $lighter-gray;
 			}
 		}
 	}
@@ -1133,12 +1137,12 @@ Full Page Template
 
 	.full-page-hero {
 		margin-top: 75px;
-		background-color: $lighter-gray;
+		background-color: $darker-gray;
 
 		.full-page-hero-bg {
 			position: relative;
 			overflow: hidden;
-			background-image: url(../img/hero-bg.png);
+			background-image: url(../img/hero-bg-light.png);
 			background-repeat: no-repeat;
 			background-position: 70% 75px;
 			background-size: 600px;
@@ -1147,18 +1151,17 @@ Full Page Template
 
 			.full-page-hero-content {
 				margin-bottom: 0;
-				color: $darker-gray;
 				max-width: 850px;
 				padding-top: 75px;
 				padding-bottom: 75px;
 			}
 
 			h1, h2, h3, h4, h5, h6, {
-				color: $darker-gray
+				color: $lighter-gray
 			}
 
 			p {
-				color: $gray;
+				color: $light-gray;
 			}
 		}
 	}
@@ -1193,7 +1196,9 @@ Full Page Template
 	.full-page-content.background-light-blue {
 		.full-page-right-col {
 			&:after {
-				background-image: url(../img/left-light-blue.png);
+				background-image: url(../img/right-light-blue.png);
+				left: 60%;
+				right: 0;
 			}
 		}
 	}
@@ -1230,6 +1235,145 @@ Full Page Template
 			p {
 				margin-bottom: 50px;
 			}
+		}
+	}
+
+/*======================================================================================================================
+
+
+Two Column Page with Content
+
+
+======================================================================================================================*/
+
+	.two-col-content-hero {
+		margin-top: 75px;
+		background-color: $darker-gray;
+
+		.two-col-content-hero-bg {
+			position: relative;
+			overflow: hidden;
+			background-image: url(../img/hero-bg-light.png);
+			background-repeat: no-repeat;
+			background-position: 70% 75px;
+			background-size: 600px;
+			background-attachment: fixed;
+
+
+			.two-col-content-hero-content {
+				margin-bottom: 0;
+				max-width: 850px;
+				padding-top: 75px;
+				padding-bottom: 75px;
+			}
+
+			h1, h2, h3, h4, h5, h6, {
+				color: $lighter-gray
+			}
+
+			p {
+				color: $light-gray;
+			}
+		}
+	}
+	
+	.two-col-content {
+		display: table;
+		width: 100%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		.two-col-content-img {
+			text-align: center;
+
+			img {
+				width: 300px;
+			}
+		}
+	}
+
+	.two-col-content-callout {
+
+		.two-col-content-left-col {
+			padding-top: 75px;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		.two-col-content-right-col {
+			position: relative;
+
+			&:after {
+				content: '';
+				background-image: url(../img/left.png);
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	.two-col-content-callout.background-lighter-gray {
+		.two-col-content-right-col {
+			&:after {
+				background-image: url(../img/left-lighter-gray.png);
+			}
+		}
+	}
+
+	.two-col-content-callout.background-light-blue {
+		.two-col-content-right-col {
+			&:after {
+				background-image: url(../img/left-light-blue.png);
+			}
+		}
+	}
+
+/*======================================================================================================================
+
+
+Large Image Template
+
+
+======================================================================================================================*/
+
+	.large-img-hero {
+		margin-top: 75px;
+		background-color: $light-blue;
+
+		.large-img-hero-bg {
+			position: relative;
+			overflow: hidden;
+			background-image: url(../img/hero-bg.png);
+			background-repeat: no-repeat;
+			background-position: 70% 75px;
+			background-size: 600px;
+			background-attachment: fixed;
+
+
+			.large-img-hero-content {
+				padding-top: 75px;
+				padding-bottom: 75px;
+				margin-bottom: 0;
+				max-width: 850px;
+			}
+
+			h1, h2, h3, h4, h5, h6, p {
+				color: $lighter-gray;
+			}
+		}
+	}
+
+	.large-img-content {
+		.large-img {
+			padding-top: 15px;
+			padding-bottom: 15px;
 		}
 	}
 
@@ -1410,20 +1554,23 @@ MOBILE
 	.list-page-hero, .two-col-page-hero, .full-page-hero, .hero-area {
 		margin-top: 65px;
 	}
-	.left-col, .right-col, .full-page-right-col {
+	.left-col, .right-col, .full-page-right-col, .two-col-content-right-col {
 		&:after {
 			display: none;
 		}
 	}
-	.full-page-right-col img {
+	.full-page-right-col img, .two-col-content-right-col img {
 		object-fit: cover;
 		height: 300px;
 		object-position: center bottom;
 	}
+	.full-page-content .full-page-left-col p, .two-col-content-callout .two-col-content-left-col p {
+		margin-bottom: 50px;
+	}
 }
 
 @media (max-width: 767px) {
-	.hero-area .hero-img img {
+	.hero-area .hero-img img, .two-col-content .two-col-content-img img {
 		width: 175px;
 		margin-bottom: 25px;
 	}
@@ -1471,6 +1618,9 @@ MOBILE
 	}
 	.gp-btn a {
 		font-size: 14px;
+	}
+	.two-col-content .gp-btn a {
+		font-size: 10px;
 	}
 }
 
