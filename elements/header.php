@@ -27,7 +27,7 @@
 				<!-- begin navigation -->
 				<nav class="main-navigation hidden-md-down">
 					<div class="menu-btn">
-						<a href="#"><img class="menu-hex-btn" src="img/blue-hex-btn.png">Request a demo</a>
+						<a href="twocolumn.php"><img class="menu-hex-btn" src="img/blue-hex-btn.png">Request a demo</a>
 					</div>
 					
 					<?php include ('elements/navigation.php') ?>
@@ -53,7 +53,7 @@
 					<div class="mobile-nav-footer">
 						<a class="mobile-nav-footer-links" href="#"><span class="search-icon"></span> Search</a>
 						<a class="mobile-nav-footer-links" href="#"><span class="login-icon"></span> Login</a>
-						<a class="pull-right mobile-nav-footer-btn" href="#"><img class="img-fluid" src="img/transparent-btn-right.png"></a>
+						<a class="pull-right mobile-nav-footer-btn" href="twocolumn.php"><img class="img-fluid" src="img/transparent-btn-right.png"></a>
 					</div>
 				</nav>
 			</div>

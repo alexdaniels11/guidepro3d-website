@@ -16,6 +16,11 @@
 			<img src="img/peeps.jpg">
 		</div>
 		<p>Founded by Dr. Fred Thompson, Dr. Paul Crandall and dental office manager Jennifer Thompson, the goal of GuidePro3D has always been to provide a better standard of care for patients with less stress for dentists.</p>
+		<div class="gp-btn row">
+			<p>
+				<a href="#">Meet GuidePro3D’s Founders</a>
+			</p>
+		</div>
 	</div>
 </div>
 

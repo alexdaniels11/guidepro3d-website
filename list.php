@@ -12,7 +12,7 @@
 </div>
 
 <div class="container list-content">
-	<div class="col-md-3 list-col list-side-bar">
+	<div class="col-lg-3 list-col list-side-bar">
 		<ul class="list-side-bar-items">
 			<h3>Event type:</h3>
 			<form>
@@ -23,7 +23,7 @@
 			</form>
 		</ul>
 	</div>
-	<div class="col-md-9 list-col">
+	<div class="col-lg-9 list-col">
 		<div class="row">
 			<table class="table">
 				<tbody>

@@ -17,9 +17,9 @@
 				<p>When it comes to placing dental implants, every dentist should be guided every time, and the innovative GuidePro3D system was created to make this vision possible.</p>
 			</div>
 			<div class="col-md-6 two-col-content-img">
-				<img src="img/guide.png">
+				<img draggable="false" src="img/guide.png">
 			</div>
-			<div class="gp-btn">
+			<div class="gp-btn row">
 				<a href="#">Take a tour of the system!</a>
 			</div>
 		</div>
