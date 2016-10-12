@@ -1136,9 +1136,40 @@ Large Image Template
     .large-img-hero .large-img-hero-bg h1, .large-img-hero .large-img-hero-bg h2, .large-img-hero .large-img-hero-bg h3, .large-img-hero .large-img-hero-bg h4, .large-img-hero .large-img-hero-bg h5, .large-img-hero .large-img-hero-bg h6, .large-img-hero .large-img-hero-bg p {
       color: #EFF2F7; }
 
-.large-img-content .large-img {
-  padding-top: 15px;
-  padding-bottom: 15px; }
+.large-img-content {
+  margin-bottom: 25px; }
+  .large-img-content .large-img {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+
+.large-img-callout-container {
+  margin-top: 12%; }
+  .large-img-callout-container .large-img-callout-text p {
+    margin-bottom: 0;
+    background-color: #EFF2F7;
+    color: #3C4858;
+    padding: 50px; }
+
+.large-img-callout-container.row:after {
+  display: none; }
+
+.mission {
+  display: table;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .mission .mission-numbers ol {
+    padding-left: 30px; }
+
+.mission-statements {
+  padding-bottom: 75px; }
+  .mission-statements .mission-statement {
+    padding-left: 40px;
+    padding-top: 25px;
+    background-image: url(../img/tools.png);
+    background-size: 25px;
+    background-position: top left;
+    background-repeat: no-repeat; }
 
 /*======================================================================================================================
 
@@ -1252,6 +1283,9 @@ MOBILE
     margin-left: 0;
     margin-right: 0; }
 
+  .mission-statements {
+    padding-bottom: 75px; }
+
   header .header-logo img {
     margin-left: 30px; }
 
@@ -1259,7 +1293,11 @@ MOBILE
     max-width: 375px; }
 
   .two-col-page-hero .left-col {
-    padding-left: 50px; } }
+    padding-left: 50px; }
+
+  .large-img-callout-container .large-img-callout-text p {
+    padding-left: 15px;
+    padding-right: 15px; } }
 @media (max-width: 991px) {
   .fixed-header header, .scrolling header {
     height: 65px; }

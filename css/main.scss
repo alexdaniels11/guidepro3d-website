@@ -1371,9 +1371,58 @@ Large Image Template
 	}
 
 	.large-img-content {
+		margin-bottom: 25px;
+
 		.large-img {
 			padding-top: 15px;
 			padding-bottom: 15px;
+		}
+	}
+
+	.large-img-callout-container {
+		margin-top: 12%;
+
+		.large-img-callout-text {
+
+			p {
+				margin-bottom: 0;
+				background-color: $lighter-gray;
+				color: $dark-gray;
+				padding: 50px;
+			}
+		}
+	}
+
+	.large-img-callout-container.row {
+		&:after {
+			display: none;
+		}
+	}
+
+	.mission {
+		display: table;
+		width: 100%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		.mission-numbers {
+
+			ol {
+				padding-left: 30px;
+			}
+		}
+	}
+
+	.mission-statements {
+		padding-bottom: 75px;
+
+		.mission-statement {
+			padding-left: 40px;
+			padding-top: 25px;
+			background-image: url(../img/tools.png);
+			background-size: 25px;
+			background-position: top left;
+			background-repeat: no-repeat;
 		}
 	}
 
@@ -1523,6 +1572,9 @@ MOBILE
 		margin-left: 0;
 		margin-right: 0;
 	}
+	.mission-statements {
+		padding-bottom: 75px;
+	}
 	header .header-logo img {
 		margin-left: 30px;
 	}
@@ -1531,6 +1583,10 @@ MOBILE
 	}
 	.two-col-page-hero .left-col {
 		padding-left: 50px;
+	}
+	.large-img-callout-container .large-img-callout-text p {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
