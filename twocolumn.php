@@ -11,15 +11,17 @@
 				<a href="tel:18444843377">1-844-484-3377</a>
 				<p>Call or fill out the form below.</p>
 			</div>
-			<form>
-				<label>Name</label>
-				<input type="text" placeholder="Your full name"></input>
-				<label>Email</label>
-				<input type="email" placeholder="Your email"></input>
-				<label>Questions/ Comments</label>
-				<textarea placeholder="Your questions/comments"></textarea>
-				<input type="submit" value="send">
-			</form>
+			<div class="gp-form">
+				<form>
+					<label>Name</label>
+					<input type="text" placeholder="Your full name"></input>
+					<label>Email</label>
+					<input type="email" placeholder="Your email"></input>
+					<label>Questions/ Comments</label>
+					<textarea placeholder="Your questions/comments"></textarea>
+					<input type="submit" value="send">
+				</form>
+			</div>
 		</div>
 	</div>
 </div>

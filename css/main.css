@@ -115,11 +115,11 @@ sup {
       .gp-btn a:hover:after {
         border-top: 75px solid #77BC1F; }
 
-form {
+.gp-form form {
   width: 100%;
   max-width: 600px;
   display: table; }
-  form label {
+  .gp-form form label {
     width: 100px;
     float: left;
     margin-bottom: 0;
@@ -128,7 +128,7 @@ form {
     color: #3C4858;
     height: 28px;
     position: relative; }
-    form label:after {
+    .gp-form form label:after {
       content: '';
       position: absolute;
       left: 100px;
@@ -137,7 +137,7 @@ form {
       height: 0;
       border-top: 10px solid #fff;
       border-right: 10px solid transparent; }
-  form input, form textarea {
+  .gp-form form input, .gp-form form textarea {
     width: calc(100% - 100px);
     float: left;
     margin-top: 10px;
@@ -151,26 +151,26 @@ form {
     -ms-transition: 0.15s;
     -o-transition: 0.15s;
     transition: 0.15s; }
-    form input:focus, form textarea:focus {
+    .gp-form form input:focus, .gp-form form textarea:focus {
       background-color: #fff;
       box-shadow: inset 0 0 0 1px #b0d23e; }
-  form input[type="checkbox"] {
+  .gp-form form input[type="checkbox"] {
     width: 25px;
     outline: none; }
-    form input[type="checkbox"]:focus {
+    .gp-form form input[type="checkbox"]:focus {
       background-color: #fff;
       box-shadow: none; }
-  form input[type="checkbox"] + label {
+  .gp-form form input[type="checkbox"] + label {
     width: calc(100% - 25px);
     font-family: 'Avenir Next LT Pro Regular';
     text-transform: uppercase; }
-    form input[type="checkbox"] + label:after {
+    .gp-form form input[type="checkbox"] + label:after {
       content: '';
       position: absolute;
       left: 0;
       top: 0;
       border: 0; }
-  form input[type="submit"], form button {
+  .gp-form form input[type="submit"], .gp-form form button {
     font-family: 'Avenir Next LT Pro Regular';
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -193,7 +193,7 @@ form {
     -ms-transition: 0.15s;
     -o-transition: 0.15s;
     transition: 0.15s; }
-    form input[type="submit"]:hover, form button:hover {
+    .gp-form form input[type="submit"]:hover, .gp-form form button:hover {
       background-color: #77BC1F; }
 
 ::-webkit-input-placeholder {
@@ -705,7 +705,7 @@ Home Hero Area
   .hero-area .hero-img {
     text-align: center; }
     .hero-area .hero-img img {
-      width: 300px; }
+      width: 85%; }
   .hero-area .hero-btn {
     font-family: 'Avenir Next LT Pro Demi';
     text-transform: uppercase;
